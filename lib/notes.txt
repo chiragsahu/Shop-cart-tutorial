@@ -1,0 +1,157 @@
+Diving deeper into widgets:
+
+vid: 4
+
+* edgeinsets is a class which is required by the padding as it doesnt accept
+numeric values
+
+* to give value we use methods:
+
+only: for the specified directions (ie: left, right, top, bottom)
+all: all directions
+symmetric: symmetric directions
+
+can use padding class instead of container, if we only want to give padding.
+
+vid 5:
+
+how to style text?
+  * add style property: now can add many properties 
+  * can add another font file and then add it to pubspec.yaml file to access it
+  make sure the indentation matters
+  * to add the font to whole app, make edit in the main file -> themedata
+
+vid 6:
+
+add row: can add row using row widget and then children[widgets]
+
+add double/int value in the box:  can add by converting to string using .tostring()
+
+vid 9:
+
+expanded widget: it takes the maximum space available and also the extra space available in the make_list
+flexible widget: flexible gives the neccesary space but not the free space. hence between
+                no wrapper and expanded wrapper
+          properties: fit: loose (default) and tight (almost same as expanded)
+                      flex: 
+
+vid 10:
+
+to add background image:
+  add decoration widget, it requires boxdecoration const. , it has following values
+      image: to add image, add another const. decorationimage, 
+        image: assetimage const. 
+        fit: to fit it with various dimensions
+        color filter: add various colors to image with blendmode which adds color to image
+
+vid 11:
+
+singlechildscrollview : takes single child as an arg but this is scrollable
+
+listview is better for lot of values or dynamic values
+
+
+
+vid 12:
+leading : it is used to place (icons) in front of text can also use trailing for behind
+
+vid 13:
+
+you can add icon buttons using iconbutton, where there's no child and icon is required parameter
+
+vid 21:
+using media queries to set the width of the device on different mode.
+using: MediaQuery.of(context).size.width
+
+listview take the full of the width available
+
+vid 24:
+gesturedetector is a widget where we can place any class if we want to use a 
+container as a button or  in games, etc. There are bunch of many options 
+available for ontap method.
+
+------------------------------------------------------------------------------------------------------------------------
+
+working with forms with
+
+vid 2:
+to setup validation we need to use forms:
+
+replaced textfield with textformfield and changed onchanged to onsaved (this 
+is optional tho)
+
+vid 3:
+
+_formKey.currentState.validate() used in submitform return if all vaildators return true or false if not.
+
+
+vid 7:
+we do not need to call set state every time.
+also we can bind all data inside a single map and save it
+
+vid 9:
+create product view list with option to edit
+
+10. improving the app
+
+vid 2:
+divider is used to create border between 2 column items.
+
+vid 3:
+delete on swipe using the dismissible widget
+
+11
+vid 3:
+making your own type for products for better code readablility and less error
+
+vid 4:
+setstate is used only if u are inside a widget
+
+created a scoped model to make a centralized state or different state slices
+accesible to different files of program
+
+vid 4:
+
+get creates getter, no calling required using parenthesis but can access
+using . as a property
+
+vid 5:
+here we instantiate the model only one instance is created when the app 
+starts and that is passed down through the widgets
+hence we can pass the data without using constructor
+no more manual data passing
+
+vid 13:
+notify listeners : comes with scoped model packages,
+                  updates scoped model listeners and hence it will re build method.
+
+vid 17:
+mixin is used to merge a class with another class            
+
+with keyword is used to add class to add functionality of the class with the main class.
+
+vid 21:
+can acccess private properties on extending on same file but u cant do when
+taking from different file
+variable starting from underscore are private properties
+_ in function param means any extra arguments but ignored
+
+------------------------------------------------------------------------------------------------------------------------
+vid 3:
+unique product id is generated on the firebase server, can be use to verify the
+request.
+
+futures: they are the code which take time to execute and can be called using 
+then (to know when its done)
+vid 5:
+created stateless widget in products to make calls from firebase api for data and show it
+
+git add -A - add files to staging area
+git status - shows changes
+git reset - removes files from staging area
+
+fetch product with index (not id)
+git diff - show changes
+
+git commit -m "fetch product with index (not id)"
+remote add origin "https://github.com/chiragsahu/Shop-cart-tutorial"
